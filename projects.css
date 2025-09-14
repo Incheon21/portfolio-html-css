@@ -1,0 +1,168 @@
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects-header h1 {
+  font-size: 3rem;
+  color: var(--primary-purple);
+  margin-bottom: 1rem;
+}
+
+.projects-header p {
+  font-size: 1.2rem;
+  color: var(--light-gray);
+  max-width: 600px;
+  margin: 0;
+  text-align: left;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: var(--white);
+  border-radius: 15px;
+  border: 1px solid var(--light-gray);
+  overflow: hidden;
+}
+
+.project-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--primary-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-image::before {
+  position: absolute;
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.project-content {
+  padding: 1.5rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-content h3 {
+  color: var(--black);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.project-description {
+  color: var(--light-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background-color: var(--primary-purple);
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.tech-tag:hover {
+  background-color: var(--dark-purple);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.visit-btn,
+.github-btn {
+  flex: 1;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  border: 2px solid var(--primary-purple);
+}
+
+.visit-btn {
+  background-color: var(--primary-purple);
+  color: var(--white);
+}
+
+.visit-btn:hover {
+  background-color: var(--dark-purple);
+}
+
+.github-btn {
+  background-color: transparent;
+  color: var(--primary-purple);
+}
+
+.github-btn:hover {
+  background-color: var(--primary-purple);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .projects-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .projects-main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-header h1 {
+    font-size: 2rem;
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+}
